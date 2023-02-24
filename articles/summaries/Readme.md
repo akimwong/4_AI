@@ -11,3 +11,6 @@
 ### 2. Fine-tuning vs retraining
 - It is necessary to distinguish between fine-tuning and re-training a language model.
 - Retraining is the process of training a model from scratch with new data, whereas fine-tuning is the process of adjusting the parameters of a previously trained model to new data.
+- <b> Fine-tuning GPT-3 for specific tasks is much faster and more efficient than completely re-training a model. <b/>
+- Fine-tuning has some drawbacks, such as the risk of over-fitting and the fact that the best results are not always obtained.
+
