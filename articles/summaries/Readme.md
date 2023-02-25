@@ -24,6 +24,24 @@
 - The amount of data required to fine-tune GPT-3 will vary depending on the task and the quality of the data. 
 - However, for fine-tuning to be effective, at least a few hundred examples of labeled data are recommended. For example, if you’re fine-tuning a text classification model, you’ll need labeled text data.
 - It’s worth noting that fine-tuning GPT-3 on your own data can be computationally expensive, so a powerful machine is recommended.
-- <b>A part that is equally important as quantity is QUALITY! </b>
-- The higher the quality and diversity of your data, the better your model will work. A diverse set of examples is needed to ensure that the model can generalize well to new examples. 
+- <b>A part that is equally important as quantity is QUALITY! </b> The higher the quality and diversity of your data, the better your model will work. A diverse set of examples is needed to ensure that the model can generalize well to new examples. 
 - A good mix of positive and negative examples is also needed to ensure that the model can handle a variety of inputs.
+
+## 6 Steps to have a fine-tuned GPT-3 model for a Helpdesk 2.0
+
+1.	Collect your data: Capture your internal database. This usually means splitting the requests and responses into separate text fields and possibly adding additional fields such as labels or tags.
+2.	Prepare your dataset: You will need to pre-process your dataset by cleaning it, tokenizing it, and creating a vocabulary. This will ensure that your dataset is properly formatted for fine-tuning with GPT-3.
+3.	Build the model: Once your dataset is ready, you can train GPT-3 on it using the fine-tuning API. Typically, you will need to specify the model architecture, the dataset, and other parameters such as the number of training trials.
+4.	Fine-tuning: After training the model, you can fine-tune it by adjusting the parameters and training it again with your data set. This enables the model to learn and improve its performance by discovering patterns in your data.
+5.	Evaluate the model: After fine-tuning, it is critical to evaluate your model’s performance by testing it on a verified dataset or monitoring its performance on real-world tasks.
+6.	Deploy the model: Once you’re happy with the performance of your model, you can integrate it into your application.
+
+## 7. Using the Code
+
+- The <b>prompt</b> variable is where you would insert your dataset. This example, it's just an illustration of how the data should look like.
+- The <b>completions</b> variable is used to specify the fine-tuning parameters. 
+- The <b>engine</b> parameter specifies which version of GPT-3 to use, the prompt parameter specifies the fine-tuning data, 
+- The <b>max_tokens</b> parameter specifies the maximum number of tokens to generate, 
+- The <b>n</b> parameter specifies the number of completions to generate
+- The <b>temperature</b> parameter controls the level of randomness in the generated text.
+
