@@ -58,3 +58,12 @@
 - This format is easy to work with, and you can use the CLI data preparation tool to convert your data into this format quickly.
 - When designing your <b>prompts and completions for fine-tuning, it is essential to remember that it is different from prompt engineering</b>. 
 - For fine-tuning, <b>each training example generally consists of a single input example and its associated output</b>. This eliminates the need to give detailed instructions or include multiple examples in the same prompt reducing the cost significantly.
+- To ensure the best results, <b>it is recommended to have at least a 100 examples</b>. The more training examples you have, the better the model will perform. 
+- Preparing training data is a crucial step in fine-tuning GPT-3, and <b>it is essential to have a good understanding of how to design your prompts and completions</b>.
+- You’ll need a set of training examples that each consist of a single input (“prompt”) and its associated output (“completion”):
+
+1. The <b>data formatting is a crucial step</b>, and it’s important to make sure that your prompt and completion follows the correct format. The <b>prompt should end with a fixed separator (e.g. \n\n###\n\n)</b> to inform the model when the prompt ends and the completion begins. Similarly, the <b>completion should start with a whitespace and end with a fixed stop sequence</b> (e.g. \n or ###) to inform the model when the completion ends.
+2. When preparing your dataset, <b>it’s important to remember that the separator, stop sequence and whitespace should not appear elsewhere in any prompt or completion</b>. This will help the model to understand the boundaries between the prompt and completion and produce accurate results.
+3. It <b>is important to provide negative examples</b> so the model knows where there are no entities to extract and doesn’t “hallucinate” or fabricate an answer.
+4. <b>For inference, it’s important to format your prompts in the same way as you did when creating the training dataset, including the same separator and stop sequence</b>. This will allow the model to properly truncate the completion.
+
