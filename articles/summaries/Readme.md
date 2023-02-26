@@ -38,10 +38,23 @@
 
 ## 7. Using the Code
 
-- The <b>prompt</b> variable is where you would insert your dataset. This example, it's just an illustration of how the data should look like.
+- The <b>prompt</b> variable is where you would insert your dataset.
 - The <b>completions</b> variable is used to specify the fine-tuning parameters. 
 - The <b>engine</b> parameter specifies which version of GPT-3 to use, the prompt parameter specifies the fine-tuning data, 
 - The <b>max_tokens</b> parameter specifies the maximum number of tokens to generate, 
 - The <b>n</b> parameter specifies the number of completions to generate
 - The <b>temperature</b> parameter controls the level of randomness in the generated text.
 
+-----------------------
+# How to Fine-Tune GPT-3 Model for Named Entity Recognition
+
+## Introduction
+- One of the most significant advantages of fine-tuning is that it enables “few-shot learning,” whereby the model can intuit the task you are trying to perform based on just a few examples.
+- once a model has been fine-tuned, you no longer need to provide examples in the prompt, resulting in cost savings and enabling lower-latency requests.
+
+## Preparing Training Data
+- Is an essential step in fine-tuning GPT-3, as it teaches the model the desired output. 
+- <b>The data must be in the form of a JSONL document</b>, where each line is a prompt-completion pair corresponding to a training example. 
+- This format is easy to work with, and you can use the CLI data preparation tool to convert your data into this format quickly.
+- When designing your <b>prompts and completions for fine-tuning, it is essential to remember that it is different from prompt engineering</b>. 
+- For fine-tuning, <b>each training example generally consists of a single input example and its associated output</b>. This eliminates the need to give detailed instructions or include multiple examples in the same prompt reducing the cost significantly.
