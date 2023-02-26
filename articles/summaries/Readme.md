@@ -67,3 +67,4 @@
 3. It <b>is important to provide negative examples</b> so the model knows where there are no entities to extract and doesn’t “hallucinate” or fabricate an answer.
 4. <b>For inference, it’s important to format your prompts in the same way as you did when creating the training dataset, including the same separator and stop sequence</b>. This will allow the model to properly truncate the completion.
 
+ no entity\n , END"
