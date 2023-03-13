@@ -7,3 +7,4 @@
 - [How ChatGPT Works: The Model Behind The Bot DL)](https://towardsdatascience.com/how-chatgpt-works-the-models-behind-the-bot-1ce5fca96286)
 - [Unleashing the Power of GPT-3: Fine-Tuning for Superhero Descriptions (DL)](https://towardsdatascience.com/unleashing-the-power-of-gpt-how-to-fine-tune-your-model-da35c90766c4)
 - [GPT-3 : Use Cases, Advantages, and Limitations (DL)](https://medium.com/ubiai-nlp/gpt-3-its-use-cases-advantages-and-limitations-e94da6cb418a)
+- [How ChatGPT really works, explained for non-technical people (DL)](https://bootcamp.uxdesign.cc/how-chatgpt-really-works-explained-for-non-technical-people-71efb078a5c9)
